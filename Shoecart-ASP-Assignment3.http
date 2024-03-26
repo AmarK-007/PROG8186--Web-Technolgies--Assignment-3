@@ -1,0 +1,6 @@
+@Shoecart_ASP_Assignment3_HostAddress = http://localhost:5018
+
+GET {{Shoecart_ASP_Assignment3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

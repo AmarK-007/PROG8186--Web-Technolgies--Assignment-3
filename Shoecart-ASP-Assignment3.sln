@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoecart-ASP-Assignment3", "Shoecart-ASP-Assignment3.csproj", "{34DE9846-E635-42A3-A099-2A15B063EA65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34DE9846-E635-42A3-A099-2A15B063EA65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34DE9846-E635-42A3-A099-2A15B063EA65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34DE9846-E635-42A3-A099-2A15B063EA65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34DE9846-E635-42A3-A099-2A15B063EA65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DFCD9B6-70AF-4962-9E2E-9F025B164D33}
+	EndGlobalSection
+EndGlobal
