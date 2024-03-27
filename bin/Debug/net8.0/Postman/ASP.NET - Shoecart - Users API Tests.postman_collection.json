@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "b84931e3-b9be-4e44-9e6e-125fc9bdd0d7",
+		"name": "ASP.NET - Shoecart - Users API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "261942"
+	},
+	"item": [
+		{
+			"name": "GET Request to Retrieve Users (Positive Case)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is of type JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response should be an array\", function () {\r",
+							"    var jsonData = pm.response.json().value; // Access the 'value' property\r",
+							"    pm.expect(jsonData).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Each user object should have required properties\", function () {\r",
+							"    var jsonData = pm.response.json().value; // Access the 'value' property\r",
+							"    \r",
+							"    if (Array.isArray(jsonData)) {\r",
+							"        jsonData.forEach(function(user) {\r",
+							"            pm.expect(user).to.have.property(\"name\");\r",
+							"            pm.expect(user).to.have.property(\"email\");\r",
+							"            pm.expect(user).to.have.property(\"username\");\r",
+							"            pm.expect(user).to.have.property(\"purchase_history\");\r",
+							"            pm.expect(user).to.have.property(\"shipping_address\");\r",
+							"        });\r",
+							"    } else {\r",
+							"        pm.expect(jsonData).to.be.an(\"array\"); // If response is not an array\r",
+							"    }\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7205/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7205",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Request to Add User (Positive Case)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is of type JSON\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response should be an object with message 'User created' and includes user details\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"    pm.expect(jsonData.statusCode).to.eql(201);\r",
+							"    pm.expect(jsonData.value.message).to.eql(\"User created\");\r",
+							"\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ajith\",\r\n  \"email\": \"Ajith@shoecart.com\",\r\n  \"password\": \"password123\",\r\n  \"username\": \"ajith\",\r\n  \"purchase_history\": \"0\",\r\n  \"shipping_address\": \"123 Main St\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7205/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7205",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Request to Update User (Positive Case)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is of type JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response should be an object with message 'User updated'\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  \r",
+							"    var valueData = jsonData.value;\r",
+							"    pm.expect(valueData.message).to.eql(\"User updated\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"AjithKumar\",\r\n  \"email\": \"Ajith@shoecart.com\",\r\n  \"password\": \"password123\",\r\n  \"username\": \"ajithKumar\",\r\n  \"purchase_history\": \"0\",\r\n  \"shipping_address\": \"123 Main St\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7205/api/User/ajith",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7205",
+					"path": [
+						"api",
+						"User",
+						"ajith"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Request to Remove User (Positive Case)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is of type JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response should be an object with message 'User deleted'\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  \r",
+							"    pm.expect(jsonData.value.message).to.eql(\"User deleted\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7205/api/User/ajith",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7205",
+					"path": [
+						"api",
+						"User",
+						"ajith"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Request to Remove User (Negative Case)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is of type JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response should be an object with message 'User not found'\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  \r",
+							"    pm.expect(jsonData.statusCode).to.eql(404);\r",
+							"    pm.expect(jsonData.value.message).to.eql(\"User not found\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7205/api/User/ajithk",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7205",
+					"path": [
+						"api",
+						"User",
+						"ajithk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

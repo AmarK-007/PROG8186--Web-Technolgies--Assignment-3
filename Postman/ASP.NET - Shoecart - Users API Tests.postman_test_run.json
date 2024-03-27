@@ -1,0 +1,243 @@
+{
+	"id": "1f77d0bc-4749-416a-b197-9778ec7b9211",
+	"name": "ASP.NET - Shoecart - Users API Tests",
+	"timestamp": "2024-03-27T01:11:27.077Z",
+	"collection_id": "261942-b84931e3-b9be-4e44-9e6e-125fc9bdd0d7",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 16,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-27T01:11:25.906Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a89e8d38-f2b5-4899-b002-66fa14cefe0d",
+			"name": "GET Request to Retrieve Users (Positive Case)",
+			"url": "https://localhost:7205/api/User",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an array": true,
+				"Each user object should have required properties": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each user object should have required properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an array": true,
+					"Each user object should have required properties": true
+				}
+			]
+		},
+		{
+			"id": "76e631a6-fe66-442c-b8b7-42dee45b03ec",
+			"name": "POST Request to Add User (Positive Case)",
+			"url": "https://localhost:7205/api/User",
+			"time": 55,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with message 'User created' and includes user details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with message 'User created' and includes user details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with message 'User created' and includes user details": true
+				}
+			]
+		},
+		{
+			"id": "d81c7879-3e71-41ed-8545-9dfe4d2deeea",
+			"name": "PUT Request to Update User (Positive Case)",
+			"url": "https://localhost:7205/api/User/ajith",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with message 'User updated'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with message 'User updated'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				40
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with message 'User updated'": true
+				}
+			]
+		},
+		{
+			"id": "fbabdc59-e96d-4cae-8fad-181ca4ae2668",
+			"name": "DELETE Request to Remove User (Positive Case)",
+			"url": "https://localhost:7205/api/User/ajith",
+			"time": 101,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with message 'User deleted'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with message 'User deleted'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with message 'User deleted'": true
+				}
+			]
+		},
+		{
+			"id": "1b774188-3ea8-43b9-bdc2-a7d7704432e0",
+			"name": "DELETE Request to Remove User (Negative Case)",
+			"url": "https://localhost:7205/api/User/ajithk",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with message 'User not found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with message 'User not found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with message 'User not found'": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 273,
+	"collection": {
+		"requests": [
+			{
+				"id": "a89e8d38-f2b5-4899-b002-66fa14cefe0d",
+				"method": "GET"
+			},
+			{
+				"id": "76e631a6-fe66-442c-b8b7-42dee45b03ec",
+				"method": "POST"
+			},
+			{
+				"id": "d81c7879-3e71-41ed-8545-9dfe4d2deeea",
+				"method": "PUT"
+			},
+			{
+				"id": "fbabdc59-e96d-4cae-8fad-181ca4ae2668",
+				"method": "DELETE"
+			},
+			{
+				"id": "1b774188-3ea8-43b9-bdc2-a7d7704432e0",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -3,12 +3,25 @@
 namespace Shoecart_ASP_Assignment3.Models {
     public class User {
         [Key]
-        public int user_id { get; set; }
-        public required string name { get; set; }
-        public required string email { get; set; }
-        public required string password { get; set; }
-        public required string username { get; set; }
-        public required string purchase_history { get; set; }
-        public required string shipping_address { get; set; }
+        public int user_id { get; set; } 
+
+        [Required] 
+        public string name { get; set; }
+
+        [Required]
+        [EmailAddress] 
+        public string email { get; set; }
+
+        [Required]
+        public string password { get; set; } 
+
+        [Required]
+        public string username { get; set; }
+
+        [Required]
+        public string purchase_history { get; set; } 
+
+        [Required]
+        public string shipping_address { get; set; }
     }
 }

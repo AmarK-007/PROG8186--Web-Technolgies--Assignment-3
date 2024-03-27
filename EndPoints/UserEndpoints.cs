@@ -1,69 +1,121 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using Shoecart_ASP_Assignment3.Data;
 using Shoecart_ASP_Assignment3.Models;
-namespace Shoecart_ASP_Assignment3.EndPoints;
+using System.Threading.Tasks;
 
-public static class UserEndpoints
-{
-    public static void MapUserEndpoints (this IEndpointRouteBuilder routes)
-    {
-        var group = routes.MapGroup("/api/User").WithTags(nameof(User));
+namespace Shoecart_ASP_Assignment3.EndPoints {
+    public static class UserEndpoints {
 
-        group.MapGet("/", async (MyDBContext db) =>
-        {
-            return await db.User.ToListAsync();
-        })
-        .WithName("GetAllUsers")
-        .WithOpenApi();
-
-        group.MapGet("/{id}", async Task<Results<Ok<User>, NotFound>> (int user_id, MyDBContext db) =>
-        {
-            return await db.User.AsNoTracking()
-                .FirstOrDefaultAsync(model => model.user_id == user_id)
-                is User model
-                    ? TypedResults.Ok(model)
-                    : TypedResults.NotFound();
-        })
-        .WithName("GetUserById")
-        .WithOpenApi();
-
-        group.MapPut("/{id}", async Task<Results<Ok, NotFound>> (int user_id, User user, MyDBContext db) =>
-        {
-            var affected = await db.User
-                .Where(model => model.user_id == user_id)
-                .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.user_id, user.user_id)
-                    .SetProperty(m => m.name, user.name)
-                    .SetProperty(m => m.email, user.email)
-                    .SetProperty(m => m.password, user.password)
-                    .SetProperty(m => m.username, user.username)
-                    .SetProperty(m => m.purchase_history, user.purchase_history)
-                    .SetProperty(m => m.shipping_address, user.shipping_address)
-                    );
-            return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
-        })
-        .WithName("UpdateUser")
-        .WithOpenApi();
-
-        group.MapPost("/", async (User user, MyDBContext db) =>
-        {
-            db.User.Add(user);
+        public static async Task<IActionResult> CreateUser(User newUser, MyDBContext db) {
+            db.User.Add(newUser);
             await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/User/{user.user_id}",user);
-        })
-        .WithName("CreateUser")
-        .WithOpenApi();
 
-        group.MapDelete("/{id}", async Task<Results<Ok, NotFound>> (int user_id, MyDBContext db) =>
-        {
-            var affected = await db.User
-                .Where(model => model.user_id == user_id)
-                .ExecuteDeleteAsync();
-            return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
-        })
-        .WithName("DeleteUser")
-        .WithOpenApi();
+            var location = $"/api/User/{newUser.user_id}";
+            var responseContent = new {
+                message = "User created",
+                user = newUser
+            };
+
+            return new CreatedResult(location, responseContent);
+        }
+
+        public static async Task<IActionResult> UpdateUser(string username, User updateUser, MyDBContext db) {
+            var user = await db.User.FirstOrDefaultAsync(u => u.username == username);
+            if (user == null) {
+                return new JsonResult(new { message = "User not found" }) { StatusCode = StatusCodes.Status404NotFound };
+            }
+
+            user.name = updateUser.name;
+            user.email = updateUser.email;
+            user.password = updateUser.password;
+            user.username = updateUser.username;
+            user.purchase_history = updateUser.purchase_history;
+            user.shipping_address = updateUser.shipping_address;
+
+            await db.SaveChangesAsync();
+
+            return new JsonResult(new { message = "User updated" });
+        }
+
+        public static async Task<IActionResult> DeleteUser(string username, MyDBContext db) {
+            var user = await db.User.FirstOrDefaultAsync(u => u.username == username);
+            if (user == null) {
+                return new JsonResult(new { message = "User not found" }) { StatusCode = StatusCodes.Status404NotFound };
+            }
+
+            db.User.Remove(user);
+            await db.SaveChangesAsync();
+
+            return new JsonResult(new { message = "User deleted" });
+        }
+        public static void MapUserEndpoints(this IEndpointRouteBuilder routes) {
+            var group = routes.MapGroup("/api/User").WithTags(nameof(User));
+
+            group.MapGet("/", async (MyDBContext db) => {
+                var users = await db.User.ToListAsync();
+                return new JsonResult(users);
+            })
+            .WithName("GetAllUsers")
+            .Produces<User[]>(StatusCodes.Status200OK);
+
+            group.MapGet("/{username:alpha}", async (string username, MyDBContext db) => {
+                var user = await db.User.FirstOrDefaultAsync(u => u.username == username);
+                if (user != null) {
+                    return new JsonResult(user);
+                } else {
+                    return new JsonResult(new { message = "User not found" }) { StatusCode = StatusCodes.Status404NotFound };
+                }
+            })
+            .WithName("GetUserByUsername")
+            .Produces<User>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
+            group.MapPut("/{username:alpha}", async (string username, User updateUser, MyDBContext db) => {
+                var user = await db.User.FirstOrDefaultAsync(u => u.username == username);
+                if (user == null) {
+                    return new JsonResult(new { message = "User not found" }) { StatusCode = StatusCodes.Status404NotFound };
+                }
+
+                user.name = updateUser.name;
+                user.email = updateUser.email;
+                user.password = updateUser.password;
+                user.username = updateUser.username;
+                user.purchase_history = updateUser.purchase_history;
+                user.shipping_address = updateUser.shipping_address;
+
+                await db.SaveChangesAsync();
+
+                return new JsonResult(new { message = "User updated" });
+            })
+            .WithName("UpdateUser")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
+            group.MapPost("/", async (User newUser, MyDBContext db) => {
+                db.User.Add(newUser);
+                await db.SaveChangesAsync();
+
+                return new CreatedResult($"/api/User/{newUser.user_id}", new { message = "User created", user = newUser });
+            })
+            .WithName("CreateUser")
+            .Produces<User>(StatusCodes.Status201Created);
+
+            group.MapDelete("/{username:alpha}", async (string username, MyDBContext db) => {
+                var user = await db.User.FirstOrDefaultAsync(u => u.username == username);
+                if (user == null) {
+                    return new JsonResult(new { message = "User not found" }) { StatusCode = StatusCodes.Status404NotFound };
+                }
+
+                db.User.Remove(user);
+                await db.SaveChangesAsync();
+
+                return new JsonResult(new { message = "User deleted" });
+            })
+            .WithName("DeleteUser")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+        }
     }
 }
