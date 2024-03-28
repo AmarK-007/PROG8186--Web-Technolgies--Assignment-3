@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shoecart-ASP-Assignment3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+071e58cdf0c856b75c73e45785398f55ddf9f11c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3acc0c7b4b7b1e0a4d87a48eb4f4274b5ccf58e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shoecart-ASP-Assignment3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shoecart-ASP-Assignment3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

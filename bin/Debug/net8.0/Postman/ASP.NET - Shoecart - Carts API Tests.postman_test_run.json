@@ -1,0 +1,280 @@
+{
+	"id": "f782e9ea-05b8-40f6-b404-9ae495fc08b0",
+	"name": "ASP.NET - Shoecart - Carts API Tests",
+	"timestamp": "2024-03-28T03:24:36.249Z",
+	"collection_id": "261942-4576bd55-205d-491c-a49a-18f76942f9c5",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 18,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-28T03:24:35.606Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "9609260a-36cf-4605-a470-fe3fa699b48e",
+			"name": "GET Request to Retrieve Cart Items",
+			"url": "https://localhost:7205/api/Cart",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an array": true
+				}
+			]
+		},
+		{
+			"id": "4e479376-1b52-4e17-9a78-6cd01d981f00",
+			"name": "POST Request to Add Item to Cart (Positive Case)",
+			"url": "https://localhost:7205/api/Cart",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "24c73217-aaba-4390-994a-e12efb39a85c",
+			"name": "PUT Request to Update Cart Item (Positive Case)",
+			"url": "https://localhost:7205/api/Cart/{id}?cartid=1",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "f9cf927a-1e9c-4535-8e92-eecef9296538",
+			"name": "PUT Request to Update Cart Item (Negative Case)",
+			"url": "https://localhost:7205/api/Cart/{id}?cartid=88",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		},
+		{
+			"id": "f4387da2-f80e-4bca-bb68-3022ebb54059",
+			"name": "DELETE Request to Remove Cart Item (Positive Case)",
+			"url": "https://localhost:7205/api/Cart/{id}?cartid=12",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "2dfc255c-7583-46f0-86c9-90f9aa3a4731",
+			"name": "DELETE Request to Remove Cart Item (Negative Case)",
+			"url": "https://localhost:7205/api/Cart/{id}?cartid=88",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 107,
+	"collection": {
+		"requests": [
+			{
+				"id": "9609260a-36cf-4605-a470-fe3fa699b48e",
+				"method": "GET"
+			},
+			{
+				"id": "4e479376-1b52-4e17-9a78-6cd01d981f00",
+				"method": "POST"
+			},
+			{
+				"id": "24c73217-aaba-4390-994a-e12efb39a85c",
+				"method": "PUT"
+			},
+			{
+				"id": "f9cf927a-1e9c-4535-8e92-eecef9296538",
+				"method": "PUT"
+			},
+			{
+				"id": "f4387da2-f80e-4bca-bb68-3022ebb54059",
+				"method": "DELETE"
+			},
+			{
+				"id": "2dfc255c-7583-46f0-86c9-90f9aa3a4731",
+				"method": "DELETE"
+			}
+		]
+	}
+}
