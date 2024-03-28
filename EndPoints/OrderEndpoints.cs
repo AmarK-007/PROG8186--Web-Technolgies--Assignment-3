@@ -1,64 +1,78 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using Shoecart_ASP_Assignment3.Data;
 using Shoecart_ASP_Assignment3.Models;
-namespace Shoecart_ASP_Assignment3.EndPoints;
+using System.Threading.Tasks;
 
-public static class OrderEndpoints
-{
-    public static void MapOrderEndpoints (this IEndpointRouteBuilder routes)
-    {
-        var group = routes.MapGroup("/api/Order").WithTags(nameof(Order));
+namespace Shoecart_ASP_Assignment3.EndPoints {
+    public static class OrderEndpoints {
+        public static void MapOrderEndpoints(this IEndpointRouteBuilder routes) {
+            var group = routes.MapGroup("/api/Order").WithTags(nameof(Order));
 
-        group.MapGet("/", async (MyDBContext db) =>
-        {
-            return await db.Orders.ToListAsync();
-        })
-        .WithName("GetAllOrders")
-        .WithOpenApi();
+            group.MapGet("/", async (MyDBContext db) => {
+                var orders = await db.Orders.ToListAsync();
+                return new JsonResult(new { message = "Retrieved all orders", data = orders }) { StatusCode = StatusCodes.Status200OK };
+            })
+            .WithName("GetAllOrders")
+            .WithOpenApi();
 
-        group.MapGet("/{id}", async Task<Results<Ok<Order>, NotFound>> (int orderid, MyDBContext db) =>
-        {
-            return await db.Orders.AsNoTracking()
-                .FirstOrDefaultAsync(model => model.OrderId == orderid)
-                is Order model
-                    ? TypedResults.Ok(model)
-                    : TypedResults.NotFound();
-        })
-        .WithName("GetOrderById")
-        .WithOpenApi();
+            group.MapGet("/{id}", async (int orderid, MyDBContext db) => {
+                var order = await db.Orders.AsNoTracking()
+                    .FirstOrDefaultAsync(model => model.OrderId == orderid);
+                return order != null
+                    ? new JsonResult(new { message = "Retrieved order", data = order }) { StatusCode = StatusCodes.Status200OK }
+                    : new JsonResult(new { message = "Order not found" }) { StatusCode = StatusCodes.Status404NotFound };
+            })
+            .WithName("GetOrderById")
+            .WithOpenApi();
 
-        group.MapPut("/{id}", async Task<Results<Ok, NotFound>> (int orderid, Order order, MyDBContext db) =>
-        {
-            var affected = await db.Orders
-                .Where(model => model.OrderId == orderid)
-                .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.OrderId, order.OrderId)
-                    .SetProperty(m => m.UserId, order.UserId)
-                    );
-            return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
-        })
-        .WithName("UpdateOrder")
-        .WithOpenApi();
+            group.MapPut("/{id}", async (int orderid, Order order, MyDBContext db) => {
+                var existingOrder = await db.Orders
+                    .FirstOrDefaultAsync(model => model.OrderId == orderid);
+                if (existingOrder != null) {
+                    existingOrder.UserId = order.UserId;
+                    await db.SaveChangesAsync();
+                    return new JsonResult(new { message = "Updated order" }) { StatusCode = StatusCodes.Status200OK };
+                } else {
+                    return new JsonResult(new { message = "Order not found" }) { StatusCode = StatusCodes.Status404NotFound };
+                }
+            })
+            .WithName("UpdateOrder")
+            .WithOpenApi();
 
-        group.MapPost("/", async (Order order, MyDBContext db) =>
-        {
-            db.Orders.Add(order);
-            await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/Order/{order.OrderId}",order);
-        })
-        .WithName("CreateOrder")
-        .WithOpenApi();
+            group.MapPost("/", async (Order order, MyDBContext db) => {
+                // If there are any OrderItems, add them to the order
+                if (order.OrderItems != null) {
+                    foreach (var item in order.OrderItems) {
+                        item.Order = order; // Set the Order of the OrderItem to the Order
+                    }
+                }
 
-        group.MapDelete("/{id}", async Task<Results<Ok, NotFound>> (int orderid, MyDBContext db) =>
-        {
-            var affected = await db.Orders
-                .Where(model => model.OrderId == orderid)
-                .ExecuteDeleteAsync();
-            return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
-        })
-        .WithName("DeleteOrder")
-        .WithOpenApi();
+                // Add the order to the context
+                db.Orders.Add(order);
+
+                // Save changes to the database
+                await db.SaveChangesAsync();
+
+                return new JsonResult(new { message = "Created order", data = order }) { StatusCode = StatusCodes.Status201Created };
+            })
+            .WithName("CreateOrder")
+            .WithOpenApi();
+
+            group.MapDelete("/{id}", async (int orderid, MyDBContext db) => {
+                var existingOrder = await db.Orders
+                    .FirstOrDefaultAsync(model => model.OrderId == orderid);
+                if (existingOrder != null) {
+                    db.Orders.Remove(existingOrder);
+                    await db.SaveChangesAsync();
+                    return new JsonResult(new { message = "Deleted order" }) { StatusCode = StatusCodes.Status200OK };
+                } else {
+                    return new JsonResult(new { message = "Order not found" }) { StatusCode = StatusCodes.Status404NotFound };
+                }
+            })
+            .WithName("DeleteOrder")
+            .WithOpenApi();
+        }
     }
 }

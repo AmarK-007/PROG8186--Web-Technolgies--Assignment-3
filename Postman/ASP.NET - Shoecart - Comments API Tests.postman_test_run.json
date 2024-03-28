@@ -1,0 +1,366 @@
+{
+	"id": "d4a4d82f-482b-4542-9494-8db7614795ce",
+	"name": "ASP.NET - Shoecart - Comments API Tests",
+	"timestamp": "2024-03-28T02:59:21.285Z",
+	"collection_id": "261942-a11db6a5-8add-465f-9144-ae22534d44da",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 24,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-28T02:59:20.338Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1895a43c-4d46-4961-a13e-f46267a4d28e",
+			"name": "GET Request all data",
+			"url": "https://localhost:7205/api/Comment",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an array": true
+				}
+			]
+		},
+		{
+			"id": "b49aa669-7827-4d44-9774-4df85de3ca88",
+			"name": "GET Request with wrong ID",
+			"url": "https://localhost:7205/api/Comment/{id}?commentid=1",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		},
+		{
+			"id": "fc114f61-fe0e-4503-9650-bcf079301568",
+			"name": "POST Request (Positive Case)",
+			"url": "https://localhost:7205/api/Comment",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "bf1b1e9a-ef1d-404b-9223-ab1924f14fa1",
+			"name": "POST Request (Negative Case)",
+			"url": "https://localhost:7205/api/Comment",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		},
+		{
+			"id": "f140d990-967a-4d65-bd48-c8719f7fa368",
+			"name": "PUT Request (Positive Case)",
+			"url": "https://localhost:7205/api/Comment/{id}?commentid=2",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "dc21e023-8fd4-4fe5-8d59-90d581cbfa67",
+			"name": "PUT Request (Negative Case)",
+			"url": "https://localhost:7205/api/Comment/{id}?commentid=1",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		},
+		{
+			"id": "8e9ca038-6b0c-47a8-8729-37f551a5b586",
+			"name": "DELETE Request (Positive Case)",
+			"url": "https://localhost:7205/api/Comment/{id}?commentid=5",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "57200fe8-4c20-4143-81a0-f451ff7e380d",
+			"name": "DELETE Request (Negative Case)",
+			"url": "https://localhost:7205/api/Comment/{id}?commentid=3",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 108,
+	"collection": {
+		"requests": [
+			{
+				"id": "1895a43c-4d46-4961-a13e-f46267a4d28e",
+				"method": "GET"
+			},
+			{
+				"id": "b49aa669-7827-4d44-9774-4df85de3ca88",
+				"method": "GET"
+			},
+			{
+				"id": "fc114f61-fe0e-4503-9650-bcf079301568",
+				"method": "POST"
+			},
+			{
+				"id": "bf1b1e9a-ef1d-404b-9223-ab1924f14fa1",
+				"method": "POST"
+			},
+			{
+				"id": "f140d990-967a-4d65-bd48-c8719f7fa368",
+				"method": "PUT"
+			},
+			{
+				"id": "dc21e023-8fd4-4fe5-8d59-90d581cbfa67",
+				"method": "PUT"
+			},
+			{
+				"id": "8e9ca038-6b0c-47a8-8729-37f551a5b586",
+				"method": "DELETE"
+			},
+			{
+				"id": "57200fe8-4c20-4143-81a0-f451ff7e380d",
+				"method": "DELETE"
+			}
+		]
+	}
+}

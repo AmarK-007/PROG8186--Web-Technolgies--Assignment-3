@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\orderendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\orderendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\cartendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\cartendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\commentendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\commentendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\productendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\productendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Migrations\\20240327050739_shoecartDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240327050739_shoecartDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\orderendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\orderendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,24 +19,48 @@
       "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Migrations\\20240327050233_shoecartDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240327050233_shoecartDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\commentendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\commentendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\productendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\productendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\endpoints\\userendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:endpoints\\userendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|e:\\conestoga\\sem-2\\web\\assignment\\assignment3\\shoecart-asp-assignment3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{34DE9846-E635-42A3-A099-2A15B063EA65}|Shoecart-ASP-Assignment3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Migrations\\20240327050233_shoecartDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240327050233_shoecartDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,11 +70,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T04:51:31.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T04:58:43.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-27T19:40:24.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Cart.cs",
+              "RelativeToolTip": "Models\\Cart.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T04:52:26.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T02:54:50.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommentEndpoints.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CommentEndpoints.cs",
+              "RelativeDocumentMoniker": "EndPoints\\CommentEndpoints.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CommentEndpoints.cs",
+              "RelativeToolTip": "EndPoints\\CommentEndpoints.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAmwEIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T05:09:58.948Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,131 +162,104 @@
               "RelativeDocumentMoniker": "EndPoints\\OrderEndpoints.cs",
               "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\OrderEndpoints.cs",
               "RelativeToolTip": "EndPoints\\OrderEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAuwDQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T05:11:46.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartEndpoints.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CartEndpoints.cs",
-              "RelativeDocumentMoniker": "EndPoints\\CartEndpoints.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CartEndpoints.cs",
-              "RelativeToolTip": "EndPoints\\CartEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "UserEndpoints.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\UserEndpoints.cs",
+              "RelativeDocumentMoniker": "EndPoints\\UserEndpoints.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\UserEndpoints.cs",
+              "RelativeToolTip": "EndPoints\\UserEndpoints.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswHcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T05:11:04.213Z",
+              "WhenOpened": "2024-03-26T03:19:03.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CommentEndpoints.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CommentEndpoints.cs",
-              "RelativeDocumentMoniker": "EndPoints\\CommentEndpoints.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CommentEndpoints.cs",
-              "RelativeToolTip": "EndPoints\\CommentEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T05:09:58.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductEndpoints.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\ProductEndpoints.cs",
-              "RelativeDocumentMoniker": "EndPoints\\ProductEndpoints.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\ProductEndpoints.cs",
-              "RelativeToolTip": "EndPoints\\ProductEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T05:09:07.066Z",
-              "EditorCaption": ""
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-26T03:21:47.203Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20240327050739_shoecartDB.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Migrations\\20240327050739_shoecartDB.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240327050739_shoecartDB.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Migrations\\20240327050739_shoecartDB.cs",
-              "RelativeToolTip": "Migrations\\20240327050739_shoecartDB.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T05:07:39.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Order.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Models\\Order.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Order.cs",
-              "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA9wBcAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T04:58:43.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Cart.cs",
-              "RelativeDocumentMoniker": "Models\\Cart.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Cart.cs",
-              "RelativeToolTip": "Models\\Cart.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAgwBQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T04:52:26.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "Models\\Comment.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Comment.cs",
-              "RelativeToolTip": "Models\\Comment.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T04:51:31.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MyDBContext.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Data\\MyDBContext.cs",
-              "RelativeDocumentMoniker": "Data\\MyDBContext.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Data\\MyDBContext.cs",
-              "RelativeToolTip": "Data\\MyDBContext.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAuwBoAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T03:59:15.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIAwwBsAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T03:13:16.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
+              "Title": "CartEndpoints.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CartEndpoints.cs",
+              "RelativeDocumentMoniker": "EndPoints\\CartEndpoints.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\CartEndpoints.cs",
+              "RelativeToolTip": "EndPoints\\CartEndpoints.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAuwC4AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T05:11:04.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductEndpoints.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\ProductEndpoints.cs",
+              "RelativeDocumentMoniker": "EndPoints\\ProductEndpoints.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\ProductEndpoints.cs",
+              "RelativeToolTip": "EndPoints\\ProductEndpoints.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T05:09:07.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MyDBContext.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Data\\MyDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\MyDBContext.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Data\\MyDBContext.cs",
+              "RelativeToolTip": "Data\\MyDBContext.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAywB4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T03:59:15.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAwwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T23:44:33.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "20240327050233_shoecartDB.cs",
               "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Migrations\\20240327050233_shoecartDB.cs",
               "RelativeDocumentMoniker": "Migrations\\20240327050233_shoecartDB.cs",
@@ -216,60 +267,7 @@
               "RelativeToolTip": "Migrations\\20240327050233_shoecartDB.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T05:02:33.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T23:44:33.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-26T03:21:47.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserEndpoints.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\UserEndpoints.cs",
-              "RelativeDocumentMoniker": "EndPoints\\UserEndpoints.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\EndPoints\\UserEndpoints.cs",
-              "RelativeToolTip": "EndPoints\\UserEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T03:19:03.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Product.cs",
-              "DocumentMoniker": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "E:\\Conestoga\\Sem-2\\Web\\Assignment\\Assignment3\\Shoecart-ASP-Assignment3\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T02:54:50.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T05:02:33.905Z"
             }
           ]
         }

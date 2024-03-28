@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Shoecart_ASP_Assignment3.Data;
 using Shoecart_ASP_Assignment3.EndPoints;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MyDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WEBAssignment3Context")));
+builder.Services.AddControllers().AddJsonOptions(options => {
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

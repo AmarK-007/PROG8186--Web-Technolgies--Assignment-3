@@ -1,22 +1,22 @@
 {
-	"id": "1f77d0bc-4749-416a-b197-9778ec7b9211",
+	"id": "91a521f7-0685-4293-b5f5-80920733e284",
 	"name": "ASP.NET - Shoecart - Users API Tests",
-	"timestamp": "2024-03-27T01:11:27.077Z",
-	"collection_id": "261942-b84931e3-b9be-4e44-9e6e-125fc9bdd0d7",
+	"timestamp": "2024-03-27T19:14:51.592Z",
+	"collection_id": "261942-8e52ae93-d4f2-4c5a-b22f-892b6208fc5a",
 	"folder_id": 0,
 	"environment_id": "0",
 	"totalPass": 16,
 	"delay": 0,
 	"persist": true,
 	"status": "finished",
-	"startedAt": "2024-03-27T01:11:25.906Z",
+	"startedAt": "2024-03-27T19:14:50.896Z",
 	"totalFail": 0,
 	"results": [
 		{
-			"id": "a89e8d38-f2b5-4899-b002-66fa14cefe0d",
+			"id": "076a3445-605a-4a54-a331-7bac348570e5",
 			"name": "GET Request to Retrieve Users (Positive Case)",
 			"url": "https://localhost:7205/api/User",
-			"time": 53,
+			"time": 46,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -46,7 +46,7 @@
 				}
 			},
 			"times": [
-				53
+				46
 			],
 			"allTests": [
 				{
@@ -58,10 +58,10 @@
 			]
 		},
 		{
-			"id": "76e631a6-fe66-442c-b8b7-42dee45b03ec",
+			"id": "539c2799-1093-4dba-9b5b-57cc562f7567",
 			"name": "POST Request to Add User (Positive Case)",
 			"url": "https://localhost:7205/api/User",
-			"time": 55,
+			"time": 14,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -86,7 +86,7 @@
 				}
 			},
 			"times": [
-				55
+				14
 			],
 			"allTests": [
 				{
@@ -97,10 +97,10 @@
 			]
 		},
 		{
-			"id": "d81c7879-3e71-41ed-8545-9dfe4d2deeea",
+			"id": "6942ec7a-34e8-4a19-8fb2-14a325cf3cc6",
 			"name": "PUT Request to Update User (Positive Case)",
 			"url": "https://localhost:7205/api/User/ajith",
-			"time": 40,
+			"time": 28,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -125,7 +125,7 @@
 				}
 			},
 			"times": [
-				40
+				28
 			],
 			"allTests": [
 				{
@@ -136,10 +136,10 @@
 			]
 		},
 		{
-			"id": "fbabdc59-e96d-4cae-8fad-181ca4ae2668",
+			"id": "da86e53d-05d0-4a27-a0c7-49cea11f81f6",
 			"name": "DELETE Request to Remove User (Positive Case)",
-			"url": "https://localhost:7205/api/User/ajith",
-			"time": 101,
+			"url": "https://localhost:7205/api/User/ajithKumar",
+			"time": 37,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -164,7 +164,7 @@
 				}
 			},
 			"times": [
-				101
+				37
 			],
 			"allTests": [
 				{
@@ -175,10 +175,10 @@
 			]
 		},
 		{
-			"id": "1b774188-3ea8-43b9-bdc2-a7d7704432e0",
+			"id": "415a9af2-1c7e-41e1-8a45-aa4f03247d3e",
 			"name": "DELETE Request to Remove User (Negative Case)",
 			"url": "https://localhost:7205/api/User/ajithk",
-			"time": 24,
+			"time": 12,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -203,7 +203,7 @@
 				}
 			},
 			"times": [
-				24
+				12
 			],
 			"allTests": [
 				{
@@ -215,27 +215,27 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 273,
+	"totalTime": 137,
 	"collection": {
 		"requests": [
 			{
-				"id": "a89e8d38-f2b5-4899-b002-66fa14cefe0d",
+				"id": "076a3445-605a-4a54-a331-7bac348570e5",
 				"method": "GET"
 			},
 			{
-				"id": "76e631a6-fe66-442c-b8b7-42dee45b03ec",
+				"id": "539c2799-1093-4dba-9b5b-57cc562f7567",
 				"method": "POST"
 			},
 			{
-				"id": "d81c7879-3e71-41ed-8545-9dfe4d2deeea",
+				"id": "6942ec7a-34e8-4a19-8fb2-14a325cf3cc6",
 				"method": "PUT"
 			},
 			{
-				"id": "fbabdc59-e96d-4cae-8fad-181ca4ae2668",
+				"id": "da86e53d-05d0-4a27-a0c7-49cea11f81f6",
 				"method": "DELETE"
 			},
 			{
-				"id": "1b774188-3ea8-43b9-bdc2-a7d7704432e0",
+				"id": "415a9af2-1c7e-41e1-8a45-aa4f03247d3e",
 				"method": "DELETE"
 			}
 		]

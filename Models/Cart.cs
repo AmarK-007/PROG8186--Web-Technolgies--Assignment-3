@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
 
 namespace Shoecart_ASP_Assignment3.Models {
     public class Cart {
@@ -10,6 +12,7 @@ namespace Shoecart_ASP_Assignment3.Models {
         public int UserId { get; set; }
 
         // Navigation property
+        [JsonIgnore]
         public ICollection<CartItem> CartItems { get; set; }
     }
 
@@ -27,7 +30,8 @@ namespace Shoecart_ASP_Assignment3.Models {
         [Required]
         public int Quantity { get; set; }
 
-        // Navigation properties
+        // Navigation property
+        [JsonIgnore]
         public Cart Cart { get; set; }
         public Product Product { get; set; }
     }

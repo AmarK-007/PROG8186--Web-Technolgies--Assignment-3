@@ -1,67 +1,95 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using Shoecart_ASP_Assignment3.Data;
 using Shoecart_ASP_Assignment3.Models;
-namespace Shoecart_ASP_Assignment3.EndPoints;
+using System.Threading.Tasks;
 
-public static class ProductEndpoints
-{
-    public static void MapProductEndpoints (this IEndpointRouteBuilder routes)
-    {
-        var group = routes.MapGroup("/api/Product").WithTags(nameof(Product));
+namespace Shoecart_ASP_Assignment3.EndPoints {
+    public static class ProductEndpoints {
 
-        group.MapGet("/", async (MyDBContext db) =>
-        {
-            return await db.Product.ToListAsync();
-        })
-        .WithName("GetAllProducts")
-        .WithOpenApi();
-
-        group.MapGet("/{id}", async Task<Results<Ok<Product>, NotFound>> (int productid, MyDBContext db) =>
-        {
-            return await db.Product.AsNoTracking()
-                .FirstOrDefaultAsync(model => model.ProductId == productid)
-                is Product model
-                    ? TypedResults.Ok(model)
-                    : TypedResults.NotFound();
-        })
-        .WithName("GetProductById")
-        .WithOpenApi();
-
-        group.MapPut("/{id}", async Task<Results<Ok, NotFound>> (int productid, Product product, MyDBContext db) =>
-        {
-            var affected = await db.Product
-                .Where(model => model.ProductId == productid)
-                .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.ProductId, product.ProductId)
-                    .SetProperty(m => m.Description, product.Description)
-                    .SetProperty(m => m.ImageUrl, product.ImageUrl)
-                    .SetProperty(m => m.Price, product.Price)
-                    .SetProperty(m => m.ShippingCost, product.ShippingCost)
-                    );
-            return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
-        })
-        .WithName("UpdateProduct")
-        .WithOpenApi();
-
-        group.MapPost("/", async (Product product, MyDBContext db) =>
-        {
-            db.Product.Add(product);
+        public static async Task<IActionResult> CreateProduct(Product newProduct, MyDBContext db) {
+            db.Product.Add(newProduct);
             await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/Product/{product.ProductId}",product);
-        })
-        .WithName("CreateProduct")
-        .WithOpenApi();
 
-        group.MapDelete("/{id}", async Task<Results<Ok, NotFound>> (int productid, MyDBContext db) =>
-        {
-            var affected = await db.Product
-                .Where(model => model.ProductId == productid)
-                .ExecuteDeleteAsync();
-            return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
-        })
-        .WithName("DeleteProduct")
-        .WithOpenApi();
+            var location = $"/api/Product/{newProduct.ProductId}";
+            var responseContent = new {
+                message = "Product created",
+                product = newProduct
+            };
+
+            return new CreatedResult(location, responseContent);
+        }
+
+        public static async Task<IActionResult> UpdateProduct(int productId, Product updateProduct, MyDBContext db) {
+            var product = await db.Product.FirstOrDefaultAsync(p => p.ProductId == productId);
+            if (product == null) {
+                return new JsonResult(new { message = "Product not found" }) { StatusCode = StatusCodes.Status404NotFound };
+            }
+
+            product.Description = updateProduct.Description;
+            product.ImageUrl = updateProduct.ImageUrl;
+            product.Price = updateProduct.Price;
+            product.ShippingCost = updateProduct.ShippingCost;
+
+            await db.SaveChangesAsync();
+
+            return new JsonResult(new { message = "Product updated" });
+        }
+
+        public static async Task<IActionResult> DeleteProduct(int productId, MyDBContext db) {
+            var product = await db.Product.FirstOrDefaultAsync(p => p.ProductId == productId);
+            if (product == null) {
+                return new JsonResult(new { message = "Product not found" }) { StatusCode = StatusCodes.Status404NotFound };
+            }
+
+            db.Product.Remove(product);
+            await db.SaveChangesAsync();
+
+            return new JsonResult(new { message = "Product deleted" });
+        }
+
+        public static void MapProductEndpoints(this IEndpointRouteBuilder routes) {
+            var group = routes.MapGroup("/api/Product").WithTags(nameof(Product));
+
+            group.MapGet("/", async (MyDBContext db) => {
+                var products = await db.Product.ToListAsync();
+                return new JsonResult(products);
+            })
+            .WithName("GetAllProducts")
+            .Produces<Product[]>(StatusCodes.Status200OK);
+
+            group.MapGet("/{productId}", async (int productId, MyDBContext db) => {
+                var product = await db.Product.FirstOrDefaultAsync(p => p.ProductId == productId);
+                if (product != null) {
+                    return new JsonResult(product);
+                } else {
+                    return new JsonResult(new { message = "Product not found" }) { StatusCode = StatusCodes.Status404NotFound };
+                }
+            })
+            .WithName("GetProductById")
+            .Produces<Product>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
+            group.MapPut("/{productId}", async (int productId, Product updateProduct, MyDBContext db) => {
+                return await UpdateProduct(productId, updateProduct, db);
+            })
+            .WithName("UpdateProduct")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
+            group.MapPost("/", async (Product newProduct, MyDBContext db) => {
+                return await CreateProduct(newProduct, db);
+            })
+            .WithName("CreateProduct")
+            .Produces<Product>(StatusCodes.Status201Created);
+
+            group.MapDelete("/{productId}", async (int productId, MyDBContext db) => {
+                return await DeleteProduct(productId, db);
+            })
+            .WithName("DeleteProduct")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+        }
     }
 }

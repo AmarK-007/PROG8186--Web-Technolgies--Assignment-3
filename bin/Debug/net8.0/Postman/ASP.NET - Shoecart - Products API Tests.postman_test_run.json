@@ -1,0 +1,323 @@
+{
+	"id": "fe676e4c-04fc-4b6f-a589-7b5f2b094c29",
+	"name": "ASP.NET - Shoecart - Products API Tests",
+	"timestamp": "2024-03-28T01:57:16.919Z",
+	"collection_id": "261942-a28911dc-d745-4518-9baf-ef903f9e1854",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-28T01:57:16.086Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d0047991-eea3-49f3-9c87-8c875291f7b6",
+			"name": "GET Requests to Retrieve  Product - Individual product",
+			"url": "https://localhost:7205/api/Product/1",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be a single product": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be a single product": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be a single product": true
+				}
+			]
+		},
+		{
+			"id": "39911416-8a52-41ad-8da0-459990b1ac81",
+			"name": "GET Requests to Retrieve Product - All products",
+			"url": "https://localhost:7205/api/Product",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an array": true
+				}
+			]
+		},
+		{
+			"id": "3f09e027-959c-4e6b-b7c7-52b4f26dbb44",
+			"name": "POST Request to Add products",
+			"url": "https://localhost:7205/api/Product/",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should contain success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should contain success message": true
+				}
+			]
+		},
+		{
+			"id": "44b5b42f-913e-4d7e-af68-b7e3a2f4eb27",
+			"name": "PUT Requests to Update products",
+			"url": "https://localhost:7205/api/Product/6",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "71bd5eb3-559d-4c4e-8eab-33e74d8357e7",
+			"name": "PUT Requests to Update products - Trying to update a non-existent product",
+			"url": "https://localhost:7205/api/Product/2",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with error message": true
+				}
+			]
+		},
+		{
+			"id": "882945fa-3978-4bc2-913a-4d5fab291f90",
+			"name": "DELETE Request to Remove products (Positive Case)",
+			"url": "https://localhost:7205/api/Product/6",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		},
+		{
+			"id": "8f215c95-5e64-45f7-b995-dd7818201742",
+			"name": "DELETE Request to Remove products (Negative Case)",
+			"url": "https://localhost:7205/api/Product/3",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is of type JSON": true,
+				"Response should be an object with success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is of type JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an object with success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is of type JSON": true,
+					"Response should be an object with success message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 123,
+	"collection": {
+		"requests": [
+			{
+				"id": "d0047991-eea3-49f3-9c87-8c875291f7b6",
+				"method": "GET"
+			},
+			{
+				"id": "39911416-8a52-41ad-8da0-459990b1ac81",
+				"method": "GET"
+			},
+			{
+				"id": "3f09e027-959c-4e6b-b7c7-52b4f26dbb44",
+				"method": "POST"
+			},
+			{
+				"id": "44b5b42f-913e-4d7e-af68-b7e3a2f4eb27",
+				"method": "PUT"
+			},
+			{
+				"id": "71bd5eb3-559d-4c4e-8eab-33e74d8357e7",
+				"method": "PUT"
+			},
+			{
+				"id": "882945fa-3978-4bc2-913a-4d5fab291f90",
+				"method": "DELETE"
+			},
+			{
+				"id": "8f215c95-5e64-45f7-b995-dd7818201742",
+				"method": "DELETE"
+			}
+		]
+	}
+}
